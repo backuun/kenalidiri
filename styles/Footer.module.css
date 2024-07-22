@@ -95,3 +95,65 @@
     color: white;
     font-weight: 300;
 }
+@media (max-width:768px) {
+    .footer{
+        padding: 10vw 5vw;
+        padding-bottom: 4vw;
+        grid-template-columns: 100%;
+        grid-gap: 7vw;
+    }
+    .divider{
+        height: 2vw;
+    }
+    .footer_company img{
+        width: 40vw;
+        margin-bottom: 4vw;
+    }
+    .footer_company p{
+        font-size: 4vw;
+        margin-bottom: 2.3vw;
+        padding-right: 4vw;
+    }
+
+    .social_media{
+        gap: 3.5vw;
+        margin-top: 5vw;
+    }
+    .social_media_box{
+        border: .12vw solid white;
+        width: 8.5vw;
+        height: 8.5vw;
+    }
+    .social_media_box svg{
+        font-size: 4vw;
+    }
+
+    .footer_menu h3{
+        font-size: 4.5vw;
+    }
+    .divider_list{
+        width: 12vw;
+        height: .75vw;
+        border-radius: 100vw;
+        margin: 3.6vw 0;
+    }
+    .footer_menu{
+        margin-left: 0;
+    }
+    .footer_menu ul li{
+        font-size: 4.2vw;
+        margin-bottom: 3vw;
+    }
+    .footer_contact p{
+        font-size: 4.2vw;
+        margin-bottom: 2.3vw;
+        text-align: start;
+    }
+
+    .copyright{
+        padding: 4.6vw 0;
+    }
+    .copyright span{
+        font-size: 3.8vw;
+    }
+}

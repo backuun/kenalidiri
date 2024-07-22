@@ -16,6 +16,17 @@
     width:10vw;
 }
 
+.hamburger{
+    display: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 2.4vw;
+    align-items: center;
+}
+
 .nav ul {
     list-style-type: none;
     display: flex;
@@ -39,9 +50,27 @@
     color: #1E1E1E;
     transition: all 0.3s ease;
 }
-.nav ul li:nth-child(4) a, .nav ul li:nth-child(5) a{
+.nav ul li:nth-child(5) a{
     color: white;
 }
+
+.nav button{
+    background-color: #0070f3;
+    border: none;
+    color: white;
+    padding: .4vw 1.3vw;
+    cursor: pointer;
+    border-radius: 100vw;
+    font-size: 1.3vw;
+}
+.btn_login{
+    color: white !important;
+    text-decoration: none;
+}
+
+.nav .closeMenu{
+    display: none;
+  }
 
 .nav ul li span{
     display: flex;
@@ -97,4 +126,156 @@
 
 .dropdown_menu ul li a:hover {
     color: #0070f3;
+}
+
+@media (max-width:768px) {
+    .header{
+        padding: 4vw 5vw;
+    }
+    .logo img {
+        width:35vw;
+    }
+    .nav{
+        border-right: 1.5vw solid #3FA2F6;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 65%;
+        height: 100%;
+        background: linear-gradient(180deg, #402E7A 0%, #261757 100%);
+        z-index: 1000;
+        padding: 4vw;
+        padding-right: 5.6vw;
+        z-index: 10;
+        transform: translateX(-500%);
+        transition: .7s all;
+    }
+    .hamburger{
+        outline: none;
+        display: block;
+        border: none;
+        background-color: transparent;
+    }
+    .hamburger svg{
+        font-size: 7.5vw;
+        color: #1E1E1E;
+    }
+    .nav_wrapper{
+        background-color: rgba(0, 0, 0, 0.562);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateX(150%);
+        transition: .7s all;
+        opacity: 0;
+    }
+    .nav_wrapper.active{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .nav_wrapper.active .nav{
+        transform: translateX(0);
+    }
+
+    .closeMenu{
+        display: block !important;
+        position: absolute;
+        right: -12vw;
+        top: 3vw;
+        background: linear-gradient(180deg, #402E7A 0%, #261757 100%) !important;
+        width: 9vw;
+        outline: none;
+        height: 9vw;
+        border-radius: 100vw;
+      }
+    .closeMenu svg{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 6.9vw;
+        color:#3FA2F6;
+    }
+    .nav{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 2.4vw;
+        align-items: start;
+    }
+    .nav ul {
+        list-style-type: none;
+        flex-direction: column;
+        display: flex;
+        justify-content: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+    .nav ul li {
+        font-size: 4.8vw;
+        padding: 5vw 0;
+        border-bottom: .12vw solid #3fa1f65d;
+        width: 100%;
+    }
+    .nav ul li a {
+        color: white;
+    }
+    .nav ul li span svg{
+        font-size: 4.2vw;
+    }
+    
+    .nav ul li a:hover {
+        color: #0070f3;
+    }
+    
+    .nav ul li.active a {
+        color: #3FA2F6; /* Active menu item color */
+    }
+    .nav ul li span{
+        color: white;
+        gap: .3vw;
+    }
+    .dropdown_menu {
+        position: relative;
+        display: inherit;
+        max-height: 0;
+        background-color: #261757;
+        box-shadow: none;
+        z-index: 1;
+        padding: 0;
+        padding-right: 0;
+        border-radius: 3vw;
+        margin-top: 0;
+        transition: .4s all;
+        overflow: hidden;
+    }
+    .dropdown_menu.active {
+        display: inherit;
+        padding: 4vw;
+        padding-right: 1.5vw;
+        max-height: 500px;
+        margin-top: 5vw;
+    }
+    .dropdown_menu ul li{
+        border-bottom: 0;
+        padding: 0;
+    }
+    .dropdown_menu.active ul{
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+    }
+    .dropdown_menu ul li a {
+        text-decoration: none;
+        color: white !important;
+        transition: all 0.3s ease;
+    }
+    .btn_login button{
+        margin-top: 4vw;
+        padding: 2vw 6vw !important;
+        font-size: 4.5vw;
+    }
 }

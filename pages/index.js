@@ -5,11 +5,54 @@ import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import axios from "axios";
 import 'swiper/css/pagination';
 
 import { Pagination } from 'swiper/modules';
 
 export default function Home() {
+  const [formData, setFormData] = useState({
+    nama_lengkap: '',
+    alamat_email: '',
+    kontak: ''
+  });
+
+  const [successMessage, setSuccessMessage] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/api/form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData),
+      });
+  
+      const data = await response.json();
+      if (data.status === 'success') {
+        console.log('Data berhasil ditambahkan:', data.pesan);
+        setSuccessMessage(data.pesan);
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 3000);
+      } else {
+        console.error(data.pesan);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
+  
+
   return (
     <>
       <Head>
@@ -34,7 +77,7 @@ export default function Home() {
         <img src="images/man_banner.png" alt="Kenali Diri" className={styles.man_banner}/>
       </div>
       <div className={styles.section1}>
-        <h1 className={styles.heading_home}><span>-</span> Kenali Dirimu pada</h1>
+        <h1 className={styles.heading_home}><span>-</span> Kenali Dirimu pada <span className={styles.dividerMobile}>-</span> </h1>
         <div className={styles.section1_layout}>
           <div className={styles.section1_box}>
               <img src="images/sekolah.png" alt="Kenali Diri di Sekolah" />
@@ -59,16 +102,44 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.section2}>
-        <h1 className={styles.heading_home}><span>-</span> Tes Gratis Sekarang</h1>
+        <h1 className={styles.heading_home}><span>-</span> Tes Gratis Sekarang <span className={styles.dividerMobile}>-</span></h1>
         <div className={styles.form_box}>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className={styles.form_box_layout}>
-              <input type="text" placeholder="Nama Lengkap"/>
-              <input type="text" placeholder="Alamat Email"/>
-              <input type="text" placeholder="Nomor Whatsapp"/>
+              <input
+                type="text"
+                name="nama_lengkap"
+                placeholder="Nama Lengkap"
+                value={formData.nama_lengkap}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="alamat_email"
+                placeholder="Alamat Email"
+                value={formData.alamat_email}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="kontak"
+                placeholder="Nomor Whatsapp"
+                value={formData.kontak}
+                onChange={handleChange}
+              />
             </div>
-            <button>Jadwalkan Sekarang</button>
+            <button type="submit">Jadwalkan Sekarang</button>
           </form>
+          {showPopup && (
+            <div className={`${styles.popup} ${styles.active}`}>
+              <div className={styles.popupBox}>
+                <img src="/images/sip.png" alt="Kenali Diri" />
+                <div className={styles.popupBoxContent}>
+                  <p>{successMessage}</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <div className={styles.section3}>
@@ -87,12 +158,26 @@ export default function Home() {
         <div className={styles.divider}></div>
       </div>
       <div className={styles.section1}>
-        <h1 className={styles.heading_home}><span>-</span> Artikel Kami</h1>
+        <h1 className={styles.heading_home}><span>-</span> Artikel Kami <span className={styles.dividerMobile}>-</span></h1>
         <Swiper
-          slidesPerView={4}
+          slidesPerView={2}
           spaceBetween={0}
           pagination={{
             clickable: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 0,
+            },
           }}
           modules={[Pagination]}
           className="mySwiper"

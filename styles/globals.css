@@ -41,3 +41,18 @@ body{
   background: radial-gradient(50% 50% at 50% 50%, #68B2F1 0%, #3FA2F6 100%) !important;
   opacity: 1 !important;
 }
+
+@media (max-width:768px) {
+  .mySwiper .swiper-wrapper{
+    padding-bottom: 10vw;
+  }
+  .swiper-pagination-bullet {
+    width: 1.5vw !important;
+    height: 1.5vw !important;
+    margin: 0 .7vw !important;
+  }
+  
+  .swiper-pagination-bullet-active{
+    width: 5vw !important;
+  }
+}
