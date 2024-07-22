@@ -50,7 +50,7 @@ export default function Header() {
                         <li className={isActive('/kontak-kami')}><Link href="/kontak-kami">Kontak Kami</Link></li>
                     </ul>
                     <button className={styles.closeMenu} onClick={handleHamburger}><IoCloseOutline/></button>
-                    <Link href="#" className={styles.btn_login}><button>Login</button></Link>
+                    <Link href="https://kenali-diri.prahwa.net/" className={styles.btn_login}><button>Login</button></Link>
                 </div>
             </div>
         </div>
