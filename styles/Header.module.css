@@ -134,18 +134,19 @@
 @media (max-width:768px) {
     .header{
         padding: 4vw 5vw;
+        justify-content: space-between;
     }
     .logo img {
         width:35vw;
     }
     .nav{
-        border-right: 1.5vw solid #3FA2F6;
+        border-right: 1.5vw solid #DAC2A8;
         position: fixed;
         left: 0;
         top: 0;
         width: 65%;
         height: 100%;
-        background: linear-gradient(180deg, #402E7A 0%, #261757 100%);
+        background: linear-gradient(270deg, #4B847D 0%, #21635B 100%);
         z-index: 1000;
         padding: 4vw;
         padding-right: 5.6vw;
@@ -161,7 +162,7 @@
     }
     .hamburger svg{
         font-size: 7.5vw;
-        color: #1E1E1E;
+        color: #4B847D;
     }
     .nav_wrapper{
         background-color: rgba(0, 0, 0, 0.562);
@@ -186,13 +187,14 @@
     .closeMenu{
         display: block !important;
         position: absolute;
-        right: -12vw;
+        right: -13vw;
         top: 3vw;
-        background: linear-gradient(180deg, #402E7A 0%, #261757 100%) !important;
+        background: linear-gradient(270deg, #4B847D 0%, #21635B 100%) !important;
         width: 9vw;
         outline: none;
+        border: .13vw solid #DAC2A8 !important;
         height: 9vw;
-        border-radius: 100vw;
+        border-radius: 100vw !important;
       }
     .closeMenu svg{
         position: absolute;
@@ -200,7 +202,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
         font-size: 6.9vw;
-        color:#3FA2F6;
+        color:#DAC2A8;
     }
     .nav{
         display: flex;
@@ -220,7 +222,7 @@
     .nav ul li {
         font-size: 4.8vw;
         padding: 5vw 0;
-        border-bottom: .12vw solid #3fa1f65d;
+        border-bottom: .12vw solid #DAC2A8;
         width: 100%;
     }
     .nav ul li a {
@@ -231,11 +233,11 @@
     }
     
     .nav ul li a:hover {
-        color: #0070f3;
+        color: #DAC2A8;
     }
     
     .nav ul li.active a {
-        color: #3FA2F6; /* Active menu item color */
+        color: #DAC2A8; /* Active menu item color */
     }
     .nav ul li span{
         color: white;
@@ -245,7 +247,7 @@
         position: relative;
         display: inherit;
         max-height: 0;
-        background-color: #261757;
+        background-color: #2c5853;
         box-shadow: none;
         z-index: 1;
         padding: 0;

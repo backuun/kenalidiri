@@ -74,6 +74,7 @@ export default function Home() {
         <img src="images/medals-banner.png" alt="Kenali Diri Sekolah" className={styles.medals_banner}/>
         <img src="images/book-banner.png" alt="Kenali Diri Sekolah" className={styles.book_banner}/>
         <img src="images/img_banner.png" alt="Kenali Diri" className={styles.man_banner}/>
+        <img src="images/img_banner_mobile.png" alt="Kenali Diri" className={styles.man_banner_mobile}/>
       </div>
       <div className={styles.section1}>
         <div className={styles.heading_section}>

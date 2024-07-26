@@ -107,7 +107,7 @@
 @media (max-width:768px) {
     .footer{
         padding: 10vw 5vw;
-        padding-bottom: 4vw;
+        padding-bottom: 26vw;
         grid-template-columns: 100%;
         grid-gap: 7vw;
     }
@@ -140,6 +140,9 @@
     .footer_menu h3{
         font-size: 4.5vw;
     }
+    .footer_contact h3{
+        font-size: 4.5vw;
+    }
     .divider_list{
         width: 12vw;
         height: .75vw;
@@ -160,6 +163,7 @@
     }
 
     .copyright{
+        width: 100%;
         padding: 4.6vw 0;
     }
     .copyright span{

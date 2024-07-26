@@ -49,6 +49,10 @@
   top: 0;
   width: 44.6vw;
   z-index: 1;
+  display: block;
+}
+.man_banner_mobile{
+  display: none;
 }
 .setting_banner{
   position: absolute;
@@ -140,7 +144,7 @@
   grid-template-columns: repeat(4, 1fr);
   align-items: flex-start;
   grid-gap: 2.3vw;
-  margin-bottom: -12vw;
+  margin-bottom: 0;
 }
 .dividerMobile{
   display: none;
@@ -426,43 +430,51 @@
 
 @media (max-width:768px) {
   .banner{
-    height: 200vw;
-    padding: 0 5vw;
+    height: 175vw;
+    padding: 0 0;
     text-align: center;
-    padding-bottom: 64vw;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .banner_text{
+    margin-top: 27vw;
   }
   .banner_text h1{
-    font-size: 10vw;
+    font-size: 8vw;
     margin-bottom: 3vw;
     width: 100%;
   }
   .banner_text p{
-    font-size: 4vw;
+    font-size: 3.7vw;
     width: 100%;
-    margin-left: 1vw;
+    padding: 0 9vw;
+    margin-left: 0;
     margin-bottom: 6.5vw;
   }
   .banner_btn{
     gap: 2.7vw;
-    margin-left: 1.1vw;
+    margin-left: 0;
     justify-content: center;
   }
   .banner_btn button{
-    padding: 1.6vw 3.3vw;
-    padding-top: 1.6vw;
+    padding: 1.9vw 4.3vw;
+    padding-top: 1.9vw;
     color: white;
     font-size: 3.6vw;
     border-radius: 100vw;
     outline: none;
     border: .12vw solid transparent;
-    background: #402E7A;
-    font-weight: 500;
+    background: #4B847D;
+    font-weight: 400;
     cursor: pointer;
   }
   .banner_btn a:nth-child(2) button{
     background-color: transparent;
-    border: .12vw solid #3FA2F6;
-    color: #3FA2F6;
+    border: .12vw solid #F2C38F;
+    color: #F2C38F;
   }
 
   .man_banner{
@@ -471,25 +483,33 @@
     bottom: 0;
     width: 68vw;
     z-index: 1;
+    display: none;
+  }
+  .man_banner_mobile{
+    display: block;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 85vw;
   }
   .setting_banner{
     bottom: 6vw;
-    width: 15vw;
+    width: 18vw;
   }
   .medals_banner{
     position: absolute;
-    right: 19vw;
+    right: 6vw;
     z-index: 2;
-    bottom: 40vw;
-    width: 16vw;
+    bottom: 53vw;
+    width: 18vw;
   }
   .book_banner{
     position: absolute;
     right: inherit;
-    left: 17vw;
+    left: 13vw;
     z-index: 2;
-    bottom: 22vw;
-    width: 15vw;
+    bottom: 37vw;
+    width: 18vw;
     animation: setting3 2s infinite linear alternate;
   }
 
@@ -499,7 +519,8 @@
   }
   
   .section1{
-    padding: 10vw 5vw;
+    padding: 12vw 5vw;
+    margin-top: 0;
   }
   .section1_layout{
     display: grid;
@@ -507,21 +528,28 @@
     align-items: flex-start;
     grid-gap: 3vw;
   }
+  .heading_section{
+    margin-bottom: 8vw;
+  }
   .heading_home{
-    font-size: 5vw;
+    font-size: 5.7vw;
     text-align: center;
-    margin-bottom: 5vw;
+    margin-bottom: 3vw;
     display: flex;
     justify-content: center;
     gap: 1.4vw;
+  }
+  .subheading_home{
+    font-size: 3.6vw;
   }
   .dividerMobile{
     display: flex;
   }
   .section1_box{
-    border: .15vw solid #3D2B76;
-    border-radius: 3vw;
+    border: none;
+    border-radius: 6vw;
     padding: 2vw;
+    padding-bottom: 2.6vw;
   }
   .section1_box img{
     width: 25vw;
@@ -539,24 +567,24 @@
 
   .section2{
     width: 100%;
-    padding: 10vw 5vw;
-    padding-top: 2vw;
+    padding: 12vw 5vw;
+    padding-top: 12vw;
   }
   .form_box_layout{
-    border: .15vw solid #3D2B76;
+    border: .15vw solid #4B847D;
     border-radius: 5vw;
-    padding: 4vw 3.7vw;
+    padding: 5vw 5vw;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 4vw;
-    margin-bottom: 6vw;
+    grid-gap: 5vw;
+    margin-bottom: 8vw;
     width: 100%;
   }
   .form_box_layout input{
     font-size: 4vw;
-    padding: 2.3vw 4.4vw;
-    border: .12vw solid #3D2B76;
-    background: #3D2B763B;
+    padding: 2.9vw 4.8vw;
+    border: none;
+    background: #4B847D;
   }
   .form_box form button{
     font-size: 4vw;
@@ -567,15 +595,15 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    padding: 13vw 5vw;
+    padding: 19vw 5vw;
     padding-left: 22vw;
-    margin-top: 12vw;
-    padding-top: 11vw;
+    margin-top: 0;
+    padding-top: 18vw;
     position: relative;
     background-position: right;
   }
   .section3_img img{
-    width: 70%;
+    width: 60%;
     margin-left: 0;
     margin-bottom: -.2vw;
     margin-top: 0;
@@ -590,19 +618,26 @@
   }
   .section3_text h1{
     width: 100%;
-    font-size: 6.7vw;
+    font-size: 6vw;
     line-height: 1.05;
     margin-bottom: 3vw;
   }
   .section3_text p{
-    font-size: 4vw;
+    font-size: 3.8vw;
   }
   .section3_text button{
     margin-top: 6vw;
     padding: 2vw 5vw;
     padding-top: 2vw;
     z-index: 2;
-    font-size: 4.5vw;
+    font-size: 4.2vw;
+  }
+
+  .article_box{
+    border: none;
+    border-radius: 4vw;
+    padding: 1.8vw;
+    padding-bottom: 2.3vw;
   }
 
   .images_article{
@@ -621,11 +656,12 @@
   .content_article{
     height: 20vw;
     margin-top: 2.5vw;
+    padding: 1vw;
   }
   .content_article h3{
     font-size: 3vw;
     margin-bottom: 1.6vw;
-    text-align: center;
+    text-align: start;
     display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
@@ -648,7 +684,7 @@
     align-items: center;
     background-color: white;
     border-radius: 30vw 30vw 0 0;
-    border: .6vw solid #68B2F1;
+    border: .6vw solid #DAC2A8;
     margin-top: 6vw;
     transform: scale(0);
     transition: .3s all;
@@ -661,7 +697,7 @@
     margin-top: -16vw;
   }
   .popupBoxContent{
-    background: linear-gradient(180deg, #402E7A 0%, #261757 100%);
+    background: linear-gradient(270deg, #4B847D 0%, #21635B 100%);
     width: 69vw;
     text-align: center;
     padding: 2.4vw;
