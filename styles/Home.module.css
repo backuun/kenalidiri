@@ -1,6 +1,6 @@
 .banner{
   width: 100%;
-  height: 100vh;
+  height: 50vw;
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -134,7 +134,7 @@
 .section2{
   width: 100%;
   padding: 6vw 13.7vw;
-  padding-top: 15vw;
+  padding-top: 14vw;
   background-image: url(../public/images/bg-section-2.png);
   background-position: center;
   background-size: cover;
@@ -144,7 +144,7 @@
   grid-template-columns: repeat(4, 1fr);
   align-items: flex-start;
   grid-gap: 2.3vw;
-  margin-bottom: 0;
+  margin-bottom: -12vw;
 }
 .dividerMobile{
   display: none;
