@@ -2,14 +2,15 @@
 
 .header {
     position: absolute;
-    top: 0;
+    top: 3vw;
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 1.8vw 13.2vw;
+    padding: 1.8vw 6.2vw;
     z-index: 10;
+    gap: 4.7vw;
 }
 
 .logo img {
@@ -20,22 +21,27 @@
     display: none;
 }
 
+.nav_wrapper{
+    width: 100%;
+}
 .nav{
     display: flex;
-    justify-content: flex-end;
-    gap: 2.4vw;
+    justify-content: space-between;
+    gap: 2.2vw;
     align-items: center;
+    width: 100%;
 }
 
 .nav ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
-    gap: 2.4vw;
+    gap: 1.7vw;
 }
 
 .nav ul li {
-    font-size: 1.3vw;
+    font-size: 1.28vw;
     font-family: var(--heading);
     font-weight: 400;
     cursor: pointer;
@@ -47,21 +53,18 @@
 
 .nav ul li a {
     text-decoration: none;
-    color: #1E1E1E;
+    color: #283535;
     transition: all 0.3s ease;
-}
-.nav ul li:nth-child(5) a{
-    color: white;
 }
 
 .nav button{
-    background-color: #0070f3;
-    border: none;
+    background-color: transparent;
+    border: .12vw solid white;
     color: white;
-    padding: .4vw 1.3vw;
+    padding: .63vw 2.4vw;
     cursor: pointer;
-    border-radius: 100vw;
-    font-size: 1.3vw;
+    border-radius: .8vw;
+    font-size: 1.28vw;
 }
 .btn_login{
     color: white !important;
@@ -75,7 +78,7 @@
 .nav ul li span{
     display: flex;
     align-items: center;
-    gap: .3vw;
+    gap: .1vw;
 }
 
 .nav ul li span svg{
@@ -83,11 +86,11 @@
 }
 
 .nav ul li a:hover {
-    color: #0070f3;
+    color: #356A6A;
 }
 
 .nav ul li.active a {
-    color: #0070f3; /* Active menu item color */
+    color: #356A6A; /* Active menu item color */
 }
 
 .nav ul li ul li:nth-child(4) a{

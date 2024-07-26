@@ -62,7 +62,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.banner}>
-        <div className={styles.divider}></div>
         <div className={styles.banner_text}>
           <h1><span>Kenali Dirimu</span>,<br/> Raih Masa Depan Gemilang!</h1>
           <p>Yuk temukan potensi terbesar dirimu dan petakan masa depanmu dengan maksimal</p>
@@ -74,10 +73,13 @@ export default function Home() {
         <img src="images/setting-banner.png" alt="Kenali Diri Sekolah" className={styles.setting_banner}/>
         <img src="images/medals-banner.png" alt="Kenali Diri Sekolah" className={styles.medals_banner}/>
         <img src="images/book-banner.png" alt="Kenali Diri Sekolah" className={styles.book_banner}/>
-        <img src="images/man_banner.png" alt="Kenali Diri" className={styles.man_banner}/>
+        <img src="images/img_banner.png" alt="Kenali Diri" className={styles.man_banner}/>
       </div>
       <div className={styles.section1}>
-        <h1 className={styles.heading_home}><span>-</span> Kenali Dirimu pada <span className={styles.dividerMobile}>-</span> </h1>
+        <div className={styles.heading_section}>
+          <h1 className={styles.heading_home}>Kenali Dirimu Pada</h1>
+          <p className={styles.subheading_home}>Melangkah lebih jauh dengan mengenali dirimu sendiri</p>
+        </div>
         <div className={styles.section1_layout}>
           <div className={styles.section1_box}>
               <img src="images/sekolah.png" alt="Kenali Diri di Sekolah" />
@@ -102,7 +104,10 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.section2}>
-        <h1 className={styles.heading_home}><span>-</span> Tes Gratis Sekarang <span className={styles.dividerMobile}>-</span></h1>
+        <div className={`${styles.heading_section} ${styles.heading_section_2}`}>
+          <h1 className={`${styles.heading_home} ${styles.heading_home_green}`}>Tes Gratis Sekarang</h1>
+          <p className={`${styles.subheading_home} ${styles.subheading_home_green}`}>Isi Form dibawah untuk melakukan tes gratis dan nantikan info dari kami</p>
+        </div>
         <div className={styles.form_box}>
           <form onSubmit={handleSubmit}>
             <div className={styles.form_box_layout}>
@@ -157,8 +162,11 @@ export default function Home() {
         <video src="video/video.mp4" autoPlay loop muted></video>
         <div className={styles.divider}></div>
       </div>
-      <div className={styles.section1}>
-        <h1 className={styles.heading_home}><span>-</span> Artikel Kami <span className={styles.dividerMobile}>-</span></h1>
+      <div className={`${styles.section1} ${styles.section1_bottom}`}>
+        <div className={styles.heading_section}>
+          <h1 className={styles.heading_home}>Jelajahi Artikel Kami</h1>
+          <p className={styles.subheading_home}>Temukan berbagai artikel menarik yang kami sajikan khusus untuk Anda</p>
+        </div>
         <Swiper
           slidesPerView={2}
           spaceBetween={0}
@@ -172,7 +180,7 @@ export default function Home() {
             },
             768: {
               slidesPerView: 4,
-              spaceBetween: 40,
+              spaceBetween: 30,
             },
             1024: {
               slidesPerView: 4,
@@ -183,7 +191,7 @@ export default function Home() {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className={styles.section1_box}>
+            <div className={`${styles.section1_box} ${styles.article_box}`}>
                 <div className={styles.images_article}>
                   <img src="images/article_image.png" alt="Artikel Kenali Diri" />
                 </div>
@@ -195,7 +203,7 @@ export default function Home() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={styles.section1_box}>
+            <div className={`${styles.section1_box} ${styles.article_box}`}>
                 <div className={styles.images_article}>
                   <img src="images/article_image.png" alt="Artikel Kenali Diri" />
                 </div>
@@ -207,7 +215,7 @@ export default function Home() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={styles.section1_box}>
+            <div className={`${styles.section1_box} ${styles.article_box}`}>
                 <div className={styles.images_article}>
                   <img src="images/article_image.png" alt="Artikel Kenali Diri" />
                 </div>
@@ -219,7 +227,7 @@ export default function Home() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={styles.section1_box}>
+            <div className={`${styles.section1_box} ${styles.article_box}`}>
                 <div className={styles.images_article}>
                   <img src="images/article_image.png" alt="Artikel Kenali Diri" />
                 </div>
@@ -231,7 +239,7 @@ export default function Home() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={styles.section1_box}>
+            <div className={`${styles.section1_box} ${styles.article_box}`}>
                 <div className={styles.images_article}>
                   <img src="images/article_image.png" alt="Artikel Kenali Diri" />
                 </div>
@@ -243,7 +251,7 @@ export default function Home() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={styles.section1_box}>
+            <div className={`${styles.section1_box} ${styles.article_box}`}>
                 <div className={styles.images_article}>
                   <img src="images/article_image.png" alt="Artikel Kenali Diri" />
                 </div>
@@ -255,7 +263,7 @@ export default function Home() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className={styles.section1_box}>
+            <div className={`${styles.section1_box} ${styles.article_box}`}>
                 <div className={styles.images_article}>
                   <img src="images/article_image.png" alt="Artikel Kenali Diri" />
                 </div>

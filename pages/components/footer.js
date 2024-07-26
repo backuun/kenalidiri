@@ -53,14 +53,17 @@ export default function Footer() {
                 </ul>
             </div>
             <div className={styles.footer_contact}>
+                <h3>Kontak Kami</h3>
+                <div className={styles.divider_list}></div>
                 <p>Perum Alexandria Jl. Palermo No. 1, Tugujaya, Cihideung</p>
                 <p>0878-6629-1056</p>
                 <p>support@kenalidiri.id</p>
             </div>
+            <div className={styles.copyright}>
+                <span>Copyright 2023 © All Right Reserved Prahwa Tech</span>
+            </div>
         </div>
-        <div className={styles.copyright}>
-            <span>Copyright 2023 © All Right Reserved Prahwa Tech</span>
-        </div>
+        
         </>
     )
 } 
