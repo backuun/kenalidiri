@@ -13,7 +13,7 @@ export default function Footer() {
             <div className={styles.footer_header}>
                 <div className={styles.footer_company}>
                     <img src="images/logo.png" alt="Kenali Diri Logo" />
-                    <p>Nama domain 'www.kenalidiri.id' adalah milik Kenali Dirimu, platform yang menyediakan panduan dan informasi untuk pengembangan diri dan pengetahuan pribadi.</p>
+                    <p>Nama domain www.kenalidiri.id adalah milik Kenali Dirimu, platform yang menyediakan panduan dan informasi untuk pengembangan diri dan pengetahuan pribadi.</p>
                     <div className={styles.social_media}>
                         <Link href='#'>
                             <div className={styles.social_media_box}>
