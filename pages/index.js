@@ -73,8 +73,8 @@ export default function Home() {
         <img src="images/setting-banner.png" alt="Kenali Diri Sekolah" className={styles.setting_banner}/>
         <img src="images/medals-banner.png" alt="Kenali Diri Sekolah" className={styles.medals_banner}/>
         <img src="images/book-banner.png" alt="Kenali Diri Sekolah" className={styles.book_banner}/>
-        <img src="images/img_banner.png" alt="Kenali Diri" className={styles.man_banner}/>
-        <img src="images/img_banner_mobile.png" alt="Kenali Diri" className={styles.man_banner_mobile}/>
+        <img src="images/family_banner.png" alt="Kenali Diri" className={styles.man_banner}/>
+        <img src="images/family_mobile.png" alt="Kenali Diri" className={styles.man_banner_mobile}/>
       </div>
       <div className={styles.section1}>
         <div className={styles.heading_section}>
@@ -83,8 +83,8 @@ export default function Home() {
         </div>
         <div className={styles.section1_layout}>
           <div className={styles.section1_box}>
-              <img src="images/sekolah.png" alt="Kenali Diri di Sekolah" />
-              <h5>Sekolah</h5>
+              <img src="images/individual.png" alt="Kenali Diri di Sekolah" />
+              <h5>Perseorangan</h5>
               <Link href='#'><button>Selengkapnya</button></Link>
           </div>
           <div className={styles.section1_box}>
@@ -105,57 +105,50 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.section2}>
-        <div className={`${styles.heading_section} ${styles.heading_section_2}`}>
-          <h1 className={`${styles.heading_home} ${styles.heading_home_green}`}>Tes Gratis Sekarang</h1>
-          <p className={`${styles.subheading_home} ${styles.subheading_home_green}`}>Isi Form dibawah untuk melakukan tes gratis dan nantikan info dari kami</p>
-        </div>
-        <div className={styles.form_box}>
-          <form onSubmit={handleSubmit}>
-            <div className={styles.form_box_layout}>
-              <input
-                type="text"
-                name="nama_lengkap"
-                placeholder="Nama Lengkap"
-                value={formData.nama_lengkap}
-                onChange={handleChange}
-              />
-              <input
-                type="text"
-                name="alamat_email"
-                placeholder="Alamat Email"
-                value={formData.alamat_email}
-                onChange={handleChange}
-              />
-              <input
-                type="text"
-                name="kontak"
-                placeholder="Nomor Whatsapp"
-                value={formData.kontak}
-                onChange={handleChange}
-              />
-            </div>
-            <button type="submit">Jadwalkan Sekarang</button>
-          </form>
-          {showPopup && (
-            <div className={`${styles.popup} ${styles.active}`}>
-              <div className={styles.popupBox}>
-                <img src="/images/sip.png" alt="Kenali Diri" />
-                <div className={styles.popupBoxContent}>
-                  <p>{successMessage}</p>
+        <img src="images/img_company.png" alt="Company Kenali Diri"/>
+        <div className={styles.section2_layout}>
+          <div className={styles.section3_text}>
+            <h1>Langkah Awal untuk <span>Mengenal</span> Diri Sendiri</h1>
+            <p>Konsultasi Personal untuk Menggapai Masa Depan yang Lebih Baik</p>
+          </div>
+          <div className={styles.form_box}>
+            <form onSubmit={handleSubmit}>
+              <div className={styles.form_box_layout}>
+                <input
+                  type="text"
+                  name="nama_lengkap"
+                  placeholder="Nama Lengkap"
+                  value={formData.nama_lengkap}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  name="alamat_email"
+                  placeholder="Alamat Email"
+                  value={formData.alamat_email}
+                  onChange={handleChange}
+                />
+                <input
+                  type="text"
+                  name="kontak"
+                  placeholder="Nomor Whatsapp"
+                  value={formData.kontak}
+                  onChange={handleChange}
+                />
+                <button type="submit">Tes Gratis Sekarang</button>
+              </div>
+            </form>
+            {showPopup && (
+              <div className={`${styles.popup} ${styles.active}`}>
+                <div className={styles.popupBox}>
+                  <img src="/images/sip.png" alt="Kenali Diri" />
+                  <div className={styles.popupBoxContent}>
+                    <p>{successMessage}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
-        </div>
-      </div>
-      <div className={styles.section3}>
-        <div className={styles.section3_img}>
-          <img src="images/section-3-img.png" alt="Kenali Diri" />
-        </div>
-        <div className={styles.section3_text}>
-          <h1>Langkah Awal untuk <span>Mengenal</span> Diri Sendiri</h1>
-          <p>Konsultasi Personal untuk Menggapai Masa Depan yang Lebih Baik</p>
-          <Link href="/"><button>Konsultasi Sekarang</button></Link>
+            )}
+          </div>
         </div>
         <div className={styles.divider}></div>
       </div>

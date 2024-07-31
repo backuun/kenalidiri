@@ -1,12 +1,15 @@
 .banner{
   width: 100%;
-  height: 49.3vw;
+  height: 49.7vw;
   position: relative;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
   padding: 3.8vw 8.3vw;
+  background-image: url(../public/images/bg_banner.png);
+  background-position: center;
+  background-size: cover;
 }
 .divider{
   position: absolute;
@@ -45,10 +48,10 @@
 
 .man_banner{
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 44.6vw;
-  z-index: 1;
+  right: 8vw;
+  bottom: 0;
+  width: 39.7vw;
+  z-index: 3;
   display: block;
 }
 .man_banner_mobile{
@@ -56,23 +59,24 @@
 }
 .setting_banner{
   position: absolute;
-  right:15vw;
-  z-index: 2;
-  bottom: 1vw;
+  right:7vw;
+  z-index: 4;
+  bottom: 1.7vw;
   width: 6.3vw;
   animation: setting 2s infinite linear alternate;
 }
 .medals_banner{
   position: absolute;
-  right: 39.7vw;
+  right:41vw;
   z-index: 2;
-  bottom: 21.5vw;
+  z-index: 4;
+  bottom: 25.5vw;
   width: 6.3vw;
   animation: setting2 2s infinite linear alternate;
 }
 .book_banner{
   position: absolute;
-  right: 7.5vw;
+  right: 8vw;
   z-index: 2;
   bottom: 23vw;
   width: 6.3vw;
@@ -129,15 +133,25 @@
   width: 100%;
   background: linear-gradient(270deg, #4B847D 0%, #21635B 100%);
   padding: 4.3vw 13.7vw;
-  margin-top: 2vw;
+  margin-top: 0;
 }
 .section2{
   width: 100%;
-  padding: 6vw 13.7vw;
-  padding-top: 14vw;
+  padding: 5.7vw 7vw;
+  padding-top: 15vw;
   background-image: url(../public/images/bg-section-2.png);
   background-position: center;
   background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  position: relative;
+}
+.section2_layout{
+  margin-top: 2vw;
+}
+.section2 img{
+  width: 93%;
 }
 .section1_layout{
   display: grid;
@@ -227,43 +241,48 @@
   text-decoration: none;
 }
 
+.form_box{
+  width: 81%;
+  margin-left: auto;
+}
 .form_box_layout{
   background-color: #DAC2A8;
   border: .12vw solid #4B847D;
-  border-radius: 1.6vw;
-  padding: 2.6vw 2.2vw;
+  border-radius: 3.6vw;
+  padding: 2.1vw 2.2vw;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2.4vw;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1.6vw;
   margin-bottom: 3vw;
 }
 .form_box_layout input{
   font-size: 1vw;
-  padding: .8vw 1.5vw;
+  padding: .76vw 1.5vw;
   border-radius: 100vw;
   outline: none;
   border: none;
-  background: #4B847D;
-  color:white ;
+  background: #EEEEEE;
+  color:#4B847D ;
   box-shadow: 0px 2px 16.5px 0px #0000000F;
 }
 .form_box_layout input::placeholder{
-  color:rgba(255, 255, 255, 0.753) ;
+  color:#4b847da6;
 }
 .form_box form button{
   margin: auto;
   display: block;
   border: none;
   outline: none;
-  font-size: 1.04vw;
-  background: radial-gradient(50% 50% at 50% 50%, #DAC2A8 0%, #DAC2A8 100%);
+  font-size: 1vw;
+  background: #4B847D;
   font-weight: 500;
-  color: #4B847D;
-  padding: .8vw 5.4vw;
+  color: white;
+  padding: .76vw 5.4vw;
   cursor: pointer;
   border-radius: 100vw;
   transition: .4s all;
   border: .12vw solid #4B847D;
+  width: 100%;
 }
 .form_box form button:hover{
   transform: scale(1.06);
@@ -288,12 +307,13 @@
 }
 .section3_text{
   text-align: end;
+  margin-bottom: 2.6vw;
 }
 .section3_text h1{
   font-family: var(--heading);
-  font-size: 4.26vw;
+  font-size: 4.1vw;
   font-weight: 500;
-  color: white;
+  color: #4B847D;
   line-height: 1.05;
   margin-bottom: 1.8vw;
 }
@@ -301,9 +321,9 @@
   color: #DAC2A8;
 }
 .section3_text p{
-  color: white;
+  color: #4B847D;
   font-size: 1.38vw;
-  font-weight: 300;
+  font-weight: 400;
 }
 .section3_text button{
   margin-top: 3.4vw;
@@ -438,9 +458,11 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: flex-end;
+    background-position: left;
+    position: relative;
   }
   .banner_text{
-    margin-top: 27vw;
+    margin-top: 29vw;
   }
   .banner_text h1{
     font-size: 8vw;
@@ -487,13 +509,14 @@
   }
   .man_banner_mobile{
     display: block;
-    position: relative;
+    position: absolute;
     bottom: 0;
-    right: 0;
-    width: 85vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
   }
   .setting_banner{
-    bottom: 6vw;
+    bottom: 2vw;
     width: 18vw;
   }
   .medals_banner{
@@ -506,7 +529,7 @@
   .book_banner{
     position: absolute;
     right: inherit;
-    left: 13vw;
+    left: 3vw;
     z-index: 2;
     bottom: 37vw;
     width: 18vw;
@@ -526,7 +549,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: flex-start;
-    grid-gap: 3vw;
+    grid-gap: 4vw;
+    margin-bottom: 0;
   }
   .heading_section{
     margin-bottom: 8vw;
@@ -567,8 +591,19 @@
 
   .section2{
     width: 100%;
-    padding: 12vw 5vw;
+    padding: 8vw 5vw;
     padding-top: 12vw;
+    grid-gap: 4.5vw;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section2 img{
+    width: 93%;
+    display: block;
+    margin: auto;
+  }
+  .form_box{
+    width: 100%;
+    margin-left: auto;
   }
   .form_box_layout{
     border: .15vw solid #4B847D;
@@ -584,7 +619,8 @@
     font-size: 4vw;
     padding: 2.9vw 4.8vw;
     border: none;
-    background: #4B847D;
+    background: #EEEEEE;
+    color:#4B847D ;
   }
   .form_box form button{
     font-size: 4vw;
@@ -614,11 +650,13 @@
   }
   .section3_text{
     z-index: 2;
-    margin-bottom: -2vw;
+    padding: 0 6vw;
+    margin-bottom: 8vw;
+    text-align: center;
   }
   .section3_text h1{
     width: 100%;
-    font-size: 6vw;
+    font-size: 6.7vw;
     line-height: 1.05;
     margin-bottom: 3vw;
   }

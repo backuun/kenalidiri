@@ -33,10 +33,10 @@ export default function Header() {
             <div className={`${styles.nav_wrapper} ${menuActive ? styles.active : ''}`}>
                 <div className={styles.nav}>
                     <ul>
-                        <li className={isActive('/')}><Link href="/">Beranda</Link></li>
-                        <li className={isActive('/tentang-kami')}><Link href="/tentang-kami">Tentang Kami</Link></li>
+                        <li className={isActive('/')}><Link href="/">Home</Link></li>
+                        {/* <li className={isActive('/tentang-kami')}><Link href="/tentang-kami">Tentang Kami</Link></li> */}
                         <li>
-                            <span onClick={toggleDropdown} className={isActive('/layanan')}>Layanan <LuChevronDown/></span>
+                            <span onClick={toggleDropdown} className={isActive('/layanan')}>Company <LuChevronDown/></span>
                             <div className={`${styles.dropdown_menu} ${dropdownActive ? styles.active : ''}`}>
                                 <ul>
                                     <li><Link href="/layanan/kampus">Kampus</Link></li>
@@ -46,8 +46,19 @@ export default function Header() {
                                 </ul>
                             </div>
                         </li>
-                        <li className={isActive('/artikel')}><Link href="/artikel">Artikel</Link></li>
-                        <li className={isActive('/kontak-kami')}><Link href="/kontak-kami">Kontak</Link></li>
+                        <li>
+                            <span onClick={toggleDropdown} className={isActive('/layanan')}>Services <LuChevronDown/></span>
+                            <div className={`${styles.dropdown_menu} ${dropdownActive ? styles.active : ''}`}>
+                                <ul>
+                                    <li><Link href="/layanan/kampus">Kampus</Link></li>
+                                    <li><Link href="/layanan/keluarga">Keluarga</Link></li>
+                                    <li><Link href="/layanan/perusahaan">Perusahaan</Link></li>
+                                    <li><Link href="/layanan/sekolah">Sekolah</Link></li>
+                                </ul>
+                            </div>
+                        </li>
+                        {/* <li className={isActive('/artikel')}><Link href="/artikel">Artikel</Link></li>
+                        <li className={isActive('/kontak-kami')}><Link href="/kontak-kami">Kontak</Link></li> */}
                     </ul>
                     <button className={styles.closeMenu} onClick={handleHamburger}><IoCloseOutline/></button>
                     <Link href="https://kenali-diri.prahwa.net/" className={styles.btn_login}><button>Login</button></Link>
