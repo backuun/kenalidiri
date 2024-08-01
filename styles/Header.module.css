@@ -10,7 +10,7 @@
     align-items: center;
     padding: 1.8vw 6.2vw;
     z-index: 10;
-    gap: 6.3vw;
+    gap: 7vw;
 }
 
 .logo img {
@@ -41,7 +41,7 @@
 }
 
 .nav ul li {
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     font-family: var(--heading);
     font-weight: 400;
     cursor: pointer;
@@ -94,10 +94,6 @@
     color: #356A6A; /* Active menu item color */
 }
 
-.nav ul li ul li:nth-child(4) a{
-    color: inherit;
-}
-
 .dropdown_menu {
     position: absolute;
     display: none;
@@ -129,6 +125,7 @@
     text-decoration: none;
     color: #333;
     transition: all 0.3s ease;
+    font-size: 1.1vw;
 }
 
 .dropdown_menu ul li a:hover {
