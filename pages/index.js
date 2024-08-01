@@ -19,6 +19,7 @@ export default function Home() {
 
   const [successMessage, setSuccessMessage] = useState('');
   const [showPopup, setShowPopup] = useState(false);
+  const [loading, setLoading] = useState(false); 
 
   const handleChange = (e) => {
     setFormData({
@@ -29,6 +30,8 @@ export default function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Mulai loading
+
     try {
       const response = await fetch('/api/form', {
         method: 'POST',
@@ -37,7 +40,7 @@ export default function Home() {
         },
         body: new URLSearchParams(formData),
       });
-  
+
       const data = await response.json();
       if (data.status === 'success') {
         console.log('Data berhasil ditambahkan:', data.pesan);
@@ -49,6 +52,8 @@ export default function Home() {
       }
     } catch (error) {
       console.error('Error submitting form:', error);
+    } finally {
+      setLoading(false); // Hentikan loading
     }
   };
   
@@ -135,7 +140,9 @@ export default function Home() {
                   value={formData.kontak}
                   onChange={handleChange}
                 />
-                <button type="submit">Tes Gratis Sekarang</button>
+                <button type="submit" disabled={loading}>
+                  {loading ? 'Mengirim...' : 'Tes Gratis Sekarang'}
+                </button>
               </div>
             </form>
             {showPopup && (
